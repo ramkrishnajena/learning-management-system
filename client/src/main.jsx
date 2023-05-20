@@ -6,7 +6,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Course from "./pages/Course.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import EnrolledCourse from "./pages/EnrolledCourse.jsx";
-import Home from "./component/Home.jsx";
+import Home from "./pages/Home.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
 import Error from "./pages/Error.jsx";
@@ -30,7 +30,11 @@ const MainRouter = createBrowserRouter([
         element: <Signup />,
       },
       {
-        path: "course",
+        path: "course/:id",
+        element: <Course />,
+      },
+      {
+        path: "author/:id",
         element: <Course />,
       },
       {

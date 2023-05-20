@@ -19,11 +19,8 @@ const BottomNav = ({ categories }) => {
   const onHover = (main) => {
     dispatch(closeMenu(false));
     dispatch(setMenuItems(main));
-    // onRef.current.querySelectorAll("p").scrollIntoView({
-    //   behavior: "smooth",
-    //   block: "nearest",
-    //   inline: "center",
-    // });
+    const data = onRef.current.querySelectorAll("p");
+    data.classList += "";
   };
 
   return (
@@ -32,7 +29,7 @@ const BottomNav = ({ categories }) => {
         return (
           <p
             ref={onRef}
-            className='cursor-pointer h-full flex items-center justify-center hover:border-x-violet-900'
+            className='cursor-pointer h-full flex items-center justify-center px-1 hover:border-s-amber-300 transition delay-100 duration-500 ease-out'
             key={i + data.main}
             onMouseEnter={() => {
               onHover(data.main);
@@ -48,12 +45,19 @@ const BottomNav = ({ categories }) => {
         onMouseEnter={() => onHover(menuItems)}
         onMouseLeave={() => dispatch(closeMenu(true))}
         className={
-          "w-full h-10 items-center justify-center flex flex-wrap gap-5 bg-zinc-950 cursor-pointer text-white absolute top-11 " +
-          (menu && "hidden")
+          "w-full h-10 items-center justify-center flex flex-wrap gap-5 bg-zinc-950 cursor-pointer text-white absolute top-11 delay-100 duration-100 " +
+          (menu && "translate opacity-0 hidden")
         }
       >
         {filteredSubCateogary?.subCategories.map((data, i) => {
-          return <p key={i}>{data?.name}</p>;
+          return (
+            <p
+              key={i}
+              className='font-sans transition delay-100 hover:text-yellow-400'
+            >
+              {data?.name}
+            </p>
+          );
         })}
       </div>
     </div>
