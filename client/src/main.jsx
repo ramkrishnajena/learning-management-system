@@ -26,7 +26,7 @@ const MainRouter = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: "singnup",
+        path: "signup",
         element: <Signup />,
       },
       {

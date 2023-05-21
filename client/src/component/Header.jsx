@@ -9,8 +9,8 @@ const Header = () => {
       <div className='w-full h-16 bg-white border-b flex justify-between items-center px-8 font-popins'>
         <div className='w-4/12'>Logo</div>
         <div className='w-8/12 flex items-center justify-end gap-5'>
-          <Button name='Login' />
-          <Button name='Signup' />
+          <Button name='Login' link='/login' />
+          <Button name='Signup' link='/signup' />
         </div>
       </div>
       <BottomNav categories={categories} />

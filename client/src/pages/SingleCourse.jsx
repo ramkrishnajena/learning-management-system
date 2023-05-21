@@ -18,7 +18,7 @@ const SingleCourse = ({
           className='cursor-pointer'
         />
         <div className='pt-3 px-1 font-popins'>
-          <Link to={"course/" + courseName}>
+          <Link to={"course/" + courseName.toLowerCase()}>
             <h3 className='font-bold'>{courseName}</h3>
           </Link>
           <Link to={"author/" + instructorID}>

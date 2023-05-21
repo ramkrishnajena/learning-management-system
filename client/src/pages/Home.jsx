@@ -27,16 +27,9 @@ const Home = () => {
       <section className='mt-10 px-16'>
         <h4 className='font-bold font-roboto text-2xl '>Best Seller Courses</h4>
         <div className='w-full h-fit  flex gap-5 my-5 relative'>
-          <div className='btn absolute top-2/4 -left-10 text-3xl xs:hidden'>
-            <BsArrowLeftSquareFill />
-          </div>
           {Object.values(courseData.courses).map((data, i) => (
-            <SingleCourse {...data} key={i} courseView='hello' />
+            <SingleCourse {...data} key={i} />
           ))}
-
-          <div className='btn absolute top-2/4 -right-10 text-3xl xs:hidden'>
-            <BsArrowRightSquareFill />
-          </div>
         </div>
       </section>
     </div>

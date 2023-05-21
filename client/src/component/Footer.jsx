@@ -11,6 +11,7 @@ const Footer = () => {
           <li className='hover:text-blue-500'>About</li>
           <li className='hover:text-blue-500'>Contact</li>
           <li className='hover:text-blue-500'>Social Media</li>
+          <li className='hover:text-blue-500'>Become and Instructor</li>
         </ul>
         <ul>
           <li className='hover:text-blue-500'>Career</li>
